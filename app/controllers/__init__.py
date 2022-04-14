@@ -1,0 +1,1 @@
+from .vacines_controller import create_vacinnes_card
