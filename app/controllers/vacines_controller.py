@@ -49,12 +49,12 @@ def create_vacinnes_card():
         new_vacine = Vaccines_card(**data)
     except InvalidCpfError:
         return {
-            "msg":"CPF invalido, deve conteer apenas 9 caracters numericos.",
+            "msg":"CPF invalido, deve conter 11 caracters, apenas numericos.",
             "exemple":"01234567891"
             },400
     except ValueError:
         return {
-            "msg":"CPF invalido, deve conteer apenas 9 caracters numericos.",
+            "msg":"CPF invalido, deve conter 11 caracters, apenas numericos.",
             "exemple":"01234567891"
             },400
 
