@@ -1,8 +1,8 @@
-"""init
+"""create tyables
 
-Revision ID: 0a82c81eb20d
+Revision ID: a32a6548b668
 Revises: 
-Create Date: 2022-04-26 19:53:37.464889
+Create Date: 2022-04-29 13:18:28.538062
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '0a82c81eb20d'
+revision = 'a32a6548b668'
 down_revision = None
 branch_labels = None
 depends_on = None
