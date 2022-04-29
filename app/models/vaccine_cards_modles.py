@@ -1,13 +1,10 @@
 from dataclasses import dataclass
-from email.policy import default
 from tokenize import String
-from turtle import st
 from app.configs.database import db
-from sqlalchemy import BigInteger, Column, Integer, String, DateTime, BIGINT
+from sqlalchemy import  Column,  String, DateTime
 import datetime as dt
 from sqlalchemy.orm import validates
 from app.exc.vacinne_exc import  InvalidCpfError
-import re
 
 @dataclass
 class Vaccines_card(db.Model):
@@ -38,13 +35,6 @@ class Vaccines_card(db.Model):
 
         for item in cpf:
             int(item)
-        
-        #Tentei fazer com regex, mas nao tava dando certo
-        #pettern = re.compile(r'^/d{11}')
-
-        #if not bool(re.search(pettern, cpf)):
-        #    raise InvalidCpfError
-         
 
         if len(cpf) != 11:
             raise InvalidCpfError
